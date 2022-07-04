@@ -7,15 +7,13 @@ import jakarta.servlet.annotation.WebServlet
 import jakarta.servlet.http.HttpServlet
 import jakarta.servlet.http.HttpServletRequest
 import jakarta.servlet.http.HttpServletResponse
-import org.apache.http.impl.client.CloseableHttpClient
+import org.springframework.web.client.getForEntity
 
 @WebServlet("/remote")
 class RemoteDelay : HttpServlet() {
-    private val httpClient: CloseableHttpClient = createClient()
-
     override fun doGet(request: HttpServletRequest, response: HttpServletResponse) {
         val delay = request.getParameter("delay").toLong()
-        val reply = httpClient.execute(HttpGetAvatar(delay)).bodyAs<Avatar>()
+        val reply = restTemplate.getForEntity<Avatar>("/avatar?delay=$delay").body()
         with(response) {
             contentType = "application/json"
             mapper.writeValue(writer, Info(delay, reply))
