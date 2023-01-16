@@ -39,4 +39,4 @@ fun clientHttpRequestFactory(): HttpComponentsClientHttpRequestFactory {
 
 val restTemplate = RestTemplateBuilder().requestFactory{clientHttpRequestFactory()}.rootUri("http://localhost:8081").build()
 
-fun <T> org.springframework.http.HttpEntity<T>.body():T = this.body!!
+fun <T> org.springframework.http.HttpEntity<T>.body():T = this.body ?: throw IllegalArgumentException("Body was null")

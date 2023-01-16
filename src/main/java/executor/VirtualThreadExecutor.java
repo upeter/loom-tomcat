@@ -17,7 +17,6 @@ public class VirtualThreadExecutor
                     .factory());
 
     public void execute(Runnable command) {
-        //System.out.println("Virtual");
         exec.submit(command);
     }
 
