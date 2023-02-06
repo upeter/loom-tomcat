@@ -1,4 +1,4 @@
-package com.example.utils
+package org.up.utils
 
 import jdk.incubator.concurrent.StructuredTaskScope
 import java.util.concurrent.ExecutorService

@@ -1,4 +1,4 @@
-package com.example.loom.dsl
+package org.up.loom.dsl
 
 import com.example.loom.domain.Avatar
 import com.example.loom.domain.Info

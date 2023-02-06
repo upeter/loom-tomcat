@@ -1,4 +1,4 @@
-package com.example.loom.domain
+package org.up.loom.domain
 
 import com.fasterxml.jackson.annotation.JsonCreator
 import com.fasterxml.jackson.annotation.JsonProperty

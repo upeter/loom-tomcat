@@ -1,6 +1,6 @@
 
 @file:JvmName("HttpClient")
-package com.example.utils
+package org.up.utils
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue

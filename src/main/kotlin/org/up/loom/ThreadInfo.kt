@@ -1,23 +1,22 @@
-package com.example.loom
+package org.up.loom
 
-import com.example.loom.domain.Avatar
 import com.example.loom.domain.Info
-import com.example.utils.*
+import com.example.utils.mapper
 import jakarta.servlet.annotation.WebServlet
 import jakarta.servlet.http.HttpServlet
 import jakarta.servlet.http.HttpServletRequest
 import jakarta.servlet.http.HttpServletResponse
-import org.springframework.web.client.getForEntity
 
-@WebServlet("/remote")
-class RemoteDelay : HttpServlet() {
+@WebServlet("/sleep")
+class ThreadInfo : HttpServlet() {
+
     override fun doGet(request: HttpServletRequest, response: HttpServletResponse) {
+        response.contentType = "text/plain"
         val delay = request.getParameter("delay").toLong()
-        val reply = restTemplate.getForEntity<Avatar>("/avatar?delay=$delay").body()
+        Thread.sleep(delay)
         with(response) {
             contentType = "application/json"
-            mapper.writeValue(writer, Info(delay, reply))
+            mapper.writeValue(writer, Info(delay))
         }
     }
-
 }

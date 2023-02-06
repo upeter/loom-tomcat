@@ -1,4 +1,4 @@
-package com.example.loom
+package org.up.loom
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

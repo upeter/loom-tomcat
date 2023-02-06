@@ -1,4 +1,4 @@
-package com.example.loom
+package org.up.loom
 
 import com.example.loom.domain.Avatar
 import com.example.loom.domain.Info

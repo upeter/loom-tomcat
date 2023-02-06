@@ -1,4 +1,4 @@
-package com.example.loom
+package org.up.loom
 
 import jdk.incubator.concurrent.StructuredTaskScope
 import kotlinx.coroutines.coroutineScope
