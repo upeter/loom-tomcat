@@ -1,10 +1,10 @@
 package org.up.loom
 
-import com.example.loom.domain.Avatar
-import com.example.loom.domain.Info
-import com.example.loom.dsl.async
-import com.example.loom.dsl.await
-import com.example.loom.dsl.virtualScope
+import com.example.tetris.domain.Avatar
+import com.example.tetris.domain.Info
+import com.example.tetris.dsl.async
+import com.example.tetris.dsl.await
+import com.example.tetris.dsl.virtualScope
 //import com.example.loom.dsl.async
 //import com.example.loom.dsl.await
 //import com.example.loom.dsl.virtualScope
@@ -13,8 +13,6 @@ import jakarta.servlet.annotation.WebServlet
 import jakarta.servlet.http.HttpServlet
 import jakarta.servlet.http.HttpServletRequest
 import jakarta.servlet.http.HttpServletResponse
-import org.apache.http.impl.client.CloseableHttpClient
-import org.springframework.boot.web.client.RestTemplateBuilder
 import org.springframework.web.client.getForEntity
 
 @WebServlet("/parallel")

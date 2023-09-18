@@ -1,11 +1,6 @@
 package org.up.loom.dsl
 
-import com.example.loom.domain.Avatar
-import com.example.loom.domain.Info
-import com.example.utils.mapper
-import com.example.utils.restTemplate
 import jdk.incubator.concurrent.StructuredTaskScope.ShutdownOnFailure
-import java.util.List
 import java.util.concurrent.*
 
 fun <T> virtualScope(propagate: Boolean = true, block: ShutdownOnFailure.() -> T): T =

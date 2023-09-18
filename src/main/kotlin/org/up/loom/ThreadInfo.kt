@@ -1,6 +1,6 @@
 package org.up.loom
 
-import com.example.loom.domain.Info
+import com.example.tetris.domain.Info
 import com.example.utils.mapper
 import jakarta.servlet.annotation.WebServlet
 import jakarta.servlet.http.HttpServlet

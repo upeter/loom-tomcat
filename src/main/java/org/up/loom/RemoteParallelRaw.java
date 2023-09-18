@@ -1,7 +1,7 @@
 package org.up.loom;
 
-import com.example.loom.domain.Avatar;
-import com.example.loom.domain.Info;
+import com.example.tetris.domain.Avatar;
+import com.example.tetris.domain.Info;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
